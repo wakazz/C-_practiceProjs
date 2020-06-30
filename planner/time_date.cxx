@@ -1,5 +1,5 @@
 #include "time_date.h"
-
+#include <tuple>
 /*
 std::string Time_date::date(){
 		
@@ -27,6 +27,27 @@ std::string Time_date::TimeandDate(){
 	return ss.str();
 }
 */
+
+
+void addtime(Time * time1, Time * time2){
+	time2 -> hour += time1 -> hour;
+	time2 -> min += time1 -> min;
+	
+	if (time2 -> min >= 60){
+		time2 -> hour += 1;
+		time2 -> min -= 60;
+	}
+}
+
+std::tuple <int, int> parseTime2curr(std::string time){
+	int hr, mn;
+	// parse string
+	std::string delimiter = ":";
+	hr = std::stoi(time.substr(0, time.find(delimiter)));
+	mn = std::stoi(time.substr(0, time.find(delimiter)));
+	return std::make_tuple(hr, mn);
+}
+
 
 
 std::string TimeandDate(){

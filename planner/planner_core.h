@@ -1,7 +1,7 @@
 // planner.h
 
-#ifndef PLANNER_H
-#define PLANNER_H
+#ifndef PLANNER_CORE_H
+#define PLANNER_CORE_H
 
 #include <string>
 #include <iostream>

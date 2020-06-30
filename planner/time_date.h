@@ -20,6 +20,15 @@ class Time_date
 		
 };
 */
+
+struct Time{
+	int hour, min; 
+};
+
+void addtime(Time *, Time *);
+
+std::tuple <int, int> parseTime2curr(std::string time);
+
 std::string TimeandDate();
 
 
